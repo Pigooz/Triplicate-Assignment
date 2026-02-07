@@ -1,3 +1,71 @@
 [gd_scene format=3 uid="uid://btyu2ukegssgb"]
 
+[ext_resource type="PackedScene" uid="uid://d0usbwq4re8h8" path="res://doorthings.tscn" id="1_6pb3s"]
+[ext_resource type="PackedScene" uid="uid://bg8of2ibi4yge" path="res://3D Assets/FBX format/block-grass-large-slope-steep.fbx" id="2_e3ldi"]
+[ext_resource type="PackedScene" uid="uid://bllh0edxwjq0u" path="res://3D Assets/FBX format/character-oobi.fbx" id="3_ah7fh"]
+[ext_resource type="PackedScene" uid="uid://cxw3wqn0t1jg" path="res://3D Assets/FBX format/coin-bronze.fbx" id="4_x2wht"]
+[ext_resource type="PackedScene" uid="uid://dlkoqu48ry3hm" path="res://3D Assets/FBX format/crate-item.fbx" id="5_52es0"]
+[ext_resource type="PackedScene" uid="uid://8t5opcxh3hhu" path="res://3D Assets/FBX format/fence-broken.fbx" id="6_08fmi"]
+[ext_resource type="PackedScene" uid="uid://cxlcvone1y03k" path="res://3D Assets/FBX format/fence-rope.fbx" id="7_8m212"]
+[ext_resource type="PackedScene" uid="uid://m2tfa5mxw5yp" path="res://3D Assets/FBX format/heart.fbx" id="8_xjl4t"]
+[ext_resource type="PackedScene" uid="uid://d2cirjo5goitb" path="res://3D Assets/FBX format/mushrooms.fbx" id="9_t3g51"]
+[ext_resource type="PackedScene" uid="uid://daiaaa2javm7o" path="res://3D Assets/FBX format/platform-overhang.fbx" id="10_386tm"]
+[ext_resource type="PackedScene" uid="uid://b6ny6jn7a5ny3" path="res://3D Assets/FBX format/spike-block-wide.fbx" id="11_2px6s"]
+[ext_resource type="PackedScene" uid="uid://bin7fogyjydgm" path="res://3D Assets/FBX format/coin-gold.fbx" id="12_7256s"]
+[ext_resource type="PackedScene" uid="uid://s5oxrjjwkidw" path="res://3D Assets/FBX format/character-oozi.fbx" id="13_3brdo"]
+[ext_resource type="PackedScene" uid="uid://btbjhgxspmqrm" path="res://3D Assets/FBX format/flag.fbx" id="14_s8c5p"]
+[ext_resource type="PackedScene" uid="uid://8lgjcrlfgl1e" path="res://3D Assets/FBX format/block-grass-corner-low.fbx" id="15_5hsgd"]
+[ext_resource type="PackedScene" uid="uid://dvnhblxry7ftg" path="res://3D Assets/FBX format/arrow.fbx" id="16_pcp4w"]
+
 [node name="MainLevel" type="Node3D" unique_id=1536152528]
+
+[node name="doorthing" parent="." unique_id=206992682 instance=ExtResource("1_6pb3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08147138, 0, 0)
+
+[node name="block-grass-large-slope-steep" parent="." unique_id=277147571 instance=ExtResource("2_e3ldi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7017334, 0, 1.4777961)
+
+[node name="character-oobi" parent="." unique_id=2037597799 instance=ExtResource("3_ah7fh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5336602, 1.3592436, 3.104561)
+
+[node name="coin-bronze" parent="." unique_id=660588585 instance=ExtResource("4_x2wht")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.648846, 0, 3.014495)
+
+[node name="crate-item" parent="." unique_id=1802150968 instance=ExtResource("5_52es0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6352724, 0, 2.3116739)
+
+[node name="fence-broken" parent="." unique_id=1001648979 instance=ExtResource("6_08fmi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033134937, 0, 2.9711227)
+
+[node name="fence-rope" parent="." unique_id=190235317 instance=ExtResource("7_8m212")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0745654, 0, 3.9847736)
+
+[node name="heart" parent="." unique_id=1184057090 instance=ExtResource("8_xjl4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9386119, 0, 4.783459)
+
+[node name="mushrooms" parent="." unique_id=135922030 instance=ExtResource("9_t3g51")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46773458, 0.44340855, 4.505986)
+
+[node name="platform-overhang" parent="." unique_id=1747562650 instance=ExtResource("10_386tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14490104, 0, 5.0423427)
+
+[node name="spike-block-wide" parent="." unique_id=1261625307 instance=ExtResource("11_2px6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8644092, 0, 5.336952)
+
+[node name="coin-gold" parent="." unique_id=1871239267 instance=ExtResource("12_7256s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3863099, 0, 3.5461752)
+
+[node name="character-oozi" parent="coin-gold" unique_id=372322969 instance=ExtResource("13_3brdo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5390346, 0, -0.005437851)
+
+[node name="flag" parent="coin-gold/character-oozi" unique_id=939826752 instance=ExtResource("14_s8c5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023395538, 0.7558346, 0.09579444)
+
+[node name="block-grass-corner-low" parent="." unique_id=492772259 instance=ExtResource("15_5hsgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1188016, 0, 1.7385405)
+
+[node name="arrow" parent="block-grass-corner-low" unique_id=447412463 instance=ExtResource("16_pcp4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11828816, 0.46914625, -0.13443816)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=704457730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5130179, 0.96839786, 5.691382)
