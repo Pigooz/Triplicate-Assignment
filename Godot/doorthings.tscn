@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d0usbwq4re8h8"]
+
+[ext_resource type="PackedScene" uid="uid://binuu7lnod1ek" path="res://3D Assets/FBX format/block-moving.fbx" id="1_duwkm"]
+[ext_resource type="PackedScene" uid="uid://bkbj1ckiv15n7" path="res://3D Assets/FBX format/door-rotate.fbx" id="2_g8x8a"]
+
+[node name="Node3D" type="Node3D" unique_id=206992682]
+
+[node name="block-moving" parent="." unique_id=900683738 instance=ExtResource("1_duwkm")]
+
+[node name="door-rotate" parent="." unique_id=240813695 instance=ExtResource("2_g8x8a")]
