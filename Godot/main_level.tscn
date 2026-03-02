@@ -18,6 +18,17 @@
 [ext_resource type="PackedScene" uid="uid://dvnhblxry7ftg" path="res://3D Assets/FBX format/arrow.fbx" id="16_pcp4w"]
 [ext_resource type="Script" uid="uid://cg4uad36nwx1c" path="res://Scripts/caller.gd" id="17_ah7fh"]
 [ext_resource type="Script" uid="uid://uff7cslmabby" path="res://Scripts/receiver.gd" id="18_x2wht"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://brackeys-proto-controller-main/brackeys-proto-controller-main/proto_controller/proto_controller.tscn" id="19_52es0"]
+[ext_resource type="Script" uid="uid://diox31ju8i2cj" path="res://Scripts/proto_controller.gd" id="20_08fmi"]
+[ext_resource type="Script" uid="uid://cr8wivce5kvfh" path="res://cointrigger.gd" id="21_08fmi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8m212"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_52es0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8m212"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_xjl4t"]
 
 [node name="MainLevel" type="Node3D" unique_id=1536152528]
 
@@ -69,9 +80,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1188016, 0, 1.7385405)
 [node name="arrow" parent="block-grass-corner-low" unique_id=447412463 instance=ExtResource("16_pcp4w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11828816, 0.46914625, -0.13443816)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=704457730]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5130179, 0.96839786, 5.691382)
-
 [node name="Caller" type="Node3D" parent="." unique_id=1201080252 node_paths=PackedStringArray("receiver")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0144365, 0, 0)
 script = ExtResource("17_ah7fh")
@@ -80,3 +88,29 @@ receiver = NodePath("../Receiver")
 [node name="Receiver" type="Node3D" parent="." unique_id=1889607797]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0144365, 0, 0)
 script = ExtResource("18_x2wht")
+
+[node name="ProtoController" parent="." unique_id=591992317 groups=["Player"] instance=ExtResource("19_52es0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8362422, 0.2791047, 5.9453764)
+script = ExtResource("20_08fmi")
+
+[node name="Floor" type="Node3D" parent="." unique_id=269681837]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1921091880]
+transform = Transform3D(21.901394, 0, 0, 0, 0.27830333, 0, 0, 0, 19.925028, 0, 0, 0)
+mesh = SubResource("BoxMesh_8m212")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor/MeshInstance3D" unique_id=1435654392]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/MeshInstance3D/StaticBody3D" unique_id=1203540068]
+transform = Transform3D(1.0027841, 0, 0, 0, 3.5932004, 0, 0, 0, 1.0188571, 0, -0.010470802, 0)
+shape = SubResource("BoxShape3D_52es0")
+
+[node name="Coin" type="Area3D" parent="." unique_id=1664527851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0647407, 1.497086, 3.027268)
+script = ExtResource("21_08fmi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Coin" unique_id=766869399]
+shape = SubResource("BoxShape3D_8m212")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Coin" unique_id=2124676082]
+mesh = SubResource("SphereMesh_xjl4t")
