@@ -57,6 +57,12 @@ func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
+	
+
+func _input(event):
+	if event.is_action_pressed("attack"):
+		print("Attack!!!")
+	
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing

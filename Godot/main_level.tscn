@@ -30,6 +30,20 @@
 
 [sub_resource type="SphereMesh" id="SphereMesh_xjl4t"]
 
+[sub_resource type="GDScript" id="GDScript_08fmi"]
+script/source = "extends Node3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="MainLevel" type="Node3D" unique_id=1536152528]
 
 [node name="doorthing" parent="." unique_id=206992682 instance=ExtResource("1_6pb3s")]
@@ -114,3 +128,6 @@ shape = SubResource("BoxShape3D_8m212")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Coin" unique_id=2124676082]
 mesh = SubResource("SphereMesh_xjl4t")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1821720571]
+script = SubResource("GDScript_08fmi")
