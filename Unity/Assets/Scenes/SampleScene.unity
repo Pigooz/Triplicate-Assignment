@@ -752,6 +752,7 @@ GameObject:
   - component: {fileID: 586592338}
   - component: {fileID: 586592337}
   - component: {fileID: 586592336}
+  - component: {fileID: 586592342}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -910,6 +911,35 @@ Transform:
   - {fileID: 330585546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &586592342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586592335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39cf8b7a54cfd84994635209577066c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackLogger
+  attack:
+    m_Name: Attack
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b2d0fe72-642a-495b-acef-0c5f33ce3c11
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 80968587-c2da-4f88-a769-756312014006
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Attack
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &607136513
 GameObject:
   m_ObjectHideFlags: 0
